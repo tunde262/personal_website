@@ -1,0 +1,253 @@
+// Header
+.settings {
+    border-right: 1px solid $twitter-background;
+    overflow-y: scroll;
+
+    /* Hide scrollbar from Chrome and Opera*/
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox*/
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.settings__header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $twitter-background;
+    padding: 15px;
+}
+
+.settings__headerText {
+    cursor: pointer;
+
+    & > h3 {
+        font-size: 20px;
+    }
+}
+
+.settings__forgotPassword {
+    width: 100%;  
+    margin-bottom: 15px;
+
+    & a {
+        font-size: 15px;
+        color: $twitter-color;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Body
+
+.settings__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $twitter-background;
+    padding: 15px;
+    color: #333;
+
+    &.active {
+        border-right: 2px solid $twitter-color;
+    }
+
+
+    /* Text */
+    font-weight: 500;
+    font-size: 15px;
+
+    &:hover {
+        background-color: $hover-background;
+        cursor: pointer;
+    }
+    
+    & .MuiSvgIcon-root {
+        width: .8em;
+        height: .8em;
+        color: $gray;
+    }
+
+    &.logout {
+        justify-content: center;
+        color: $danger;
+    }
+
+    &.noHover:hover {
+        background-color: #fff;
+        cursor: default;
+    }
+}
+
+.settings__body {
+    padding: 0;
+
+    & > h3 {
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    &.terms {
+        padding: 0 3vw;
+    }
+}
+
+.edit__body {
+    width: 100%;
+
+    & > h3 {
+        font-weight: 700;
+        font-size: 15px;
+    }
+}
+
+.settings__section {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 20px 1vw;
+    border-bottom: 1px solid $twitter-background;
+
+
+    & > div {
+        flex: 0.5;
+
+        & p {
+            font-size: 14px;
+            font-weight: 500;
+        }
+    
+        &:last-of-type {
+            display: flex;
+            justify-content: flex-end;
+    
+            & p {
+                color: $twitter-color;
+            }
+        }
+    }
+}
+
+.settings__payments--balance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+
+    & h2 {
+        font-size: 35px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        margin: 5px 0;
+
+        & span {
+            font-size: 30px;
+            margin-left: -10px;
+            margin-right: 2px;
+        }
+    }
+
+    & p {
+        font-size: 14px;
+        color: $light-gray;
+    }
+}
+
+.settings__payments--income__container {
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    & > div {
+        flex: 1;
+        text-align: center;
+    }
+      
+    & > div:first-of-type {
+        border-right: 1px solid #dedede;
+    }
+}
+  
+  
+.money {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 5px 0;
+
+    &.plus {
+        color: $green;
+    }
+      
+    &.minus {
+        color: $danger;
+    }
+}
+
+.settings__payments--activity {
+    padding: 10px 0;
+
+    & h3 {
+        font-size: 16px;
+    }
+    
+    & > div {
+        padding: 20px 10px;
+    }
+}
+
+.settings__payments--post {
+    display: flex;
+    border-bottom: 1px solid $twitter-background;
+}
+
+.settings__payments--post__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    padding: 0 5px;
+    box-sizing: border-box;
+
+    & > h3 {
+        margin-bottom: 4px;
+        font-size: 15px;
+    }
+
+    & > p {
+        line-height: 18px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-transform: capitalize;
+        color: $light-gray;
+        font-size: 13px;
+    }
+}
+
+.settings__payments--post__amount {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .money {
+        font-size: 16px;
+    }
+}
+
+.button-hover-class {
+    cursor: pointer;
+    &:hover {
+        & > div {
+            border: 2px solid #ff4b2b !important;
+        }
+    }
+}

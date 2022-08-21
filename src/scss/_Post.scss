@@ -1,0 +1,330 @@
+.post {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid $twitter-background;
+    position: relative;
+
+    &.hide {
+        display: none;
+    }
+
+    &:hover {
+        background-color: #f5f8fa;
+        cursor: pointer;
+
+        & .secondaryBtn {
+            background-color: #f5f8fa;
+
+            &.active {
+                border: 1px solid $twitter-background; 
+            }
+        }
+
+        & .post__body .edit-dropdown {
+            background: #f5f8fa;
+        }
+    }
+
+    &.noHighlight:hover {
+        background-color: #fff;
+        cursor: default;
+    }
+
+}
+
+.post__body {
+    flex: 1;
+    padding: 10px;
+
+    & > img {
+        border-radius: 20px;
+    }
+}
+
+// Post Image Container & elements
+
+.post__imgContainer{
+    box-sizing: border-box;
+    margin-top: 1rem;
+    overflow: hidden;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 16px;
+    border: 1px solid rgb(207, 217, 222);
+    width: 100%;
+    height: calc(calc(calc(calc(calc(1300px * 0.8) - 50px) * 0.6) * .53) - 45px);
+    min-height: 283.5px;
+    z-index: 10;
+
+    &.one_image {
+        min-height: 350px;
+    }
+
+    // & img {
+    //     width: 100%;
+    //     border-radius: 16px;
+    // }
+
+    & > .post__imgRow:first-of-type {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-right: 2px;
+
+        & > .post__imgColumn {
+
+            &:first-of-type {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+            &:last-of-type {
+                border-top-right-radius: 0;
+                border-top-left-radius: 0;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
+
+    & > .post__imgRow:last-of-type {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+        & > .post__imgColumn {
+
+            &:first-of-type {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            &:last-of-type {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
+}
+
+.post__imgRow {
+    height: 100%;
+    width: calc(50% - 1px);
+    border-radius: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    & > .post__imgColumn {
+
+        &:first-of-type {
+            margin-bottom: 2px;
+        }
+    }
+}
+
+.post__imgColumn{
+    box-sizing: border-box;
+    border-radius: 16px;
+    width: 100%;
+    height: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+// End
+
+.post__shoppable {
+    padding-right: 25px; 
+    padding-left: 5px;
+    text-align: center;
+
+    & > p {
+        font-size: 14px;
+        font-weight: 600;
+        color: $twitter-color;
+    }
+}
+
+.post__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+    margin-top: 20px;
+    color: $light-gray;
+
+    & > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & button {
+            position: relative;
+            z-index: 10;
+        }
+
+        & p {
+            font-size: 15px;
+            margin-left: 10px;
+        }
+
+        &.active {
+            color: $danger;
+        }
+
+        & .MuiSvgIcon-root:not(:last-of-type) {
+            width: 1.1rem;
+            height: 1.1rem;
+        }
+    
+        & .MuiSvgIcon-root:last-of-type {
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+}
+
+.post__headerDescription {
+    margin-bottom: 10px;
+    font-size: 23px;
+    font-weight: 500;
+
+    &.withImgs {
+        font-size: 20px;
+    }
+}
+
+.post__headerText {
+
+    & > h3 {
+        font-size: 15px;
+        margin-bottom: 5px;
+        width: fit-content;
+    
+        & a {
+            text-decoration: none;
+            color: #333;
+
+            &:hover span:first-of-type {
+                text-decoration: underline;
+            }
+
+            & > span:last-of-type {
+                font-weight: 500;
+                font-size: 13px;
+                color: $gray;
+                text-decoration: none;
+            }
+        }
+
+        & > span:first-of-type, span:last-of-type {
+            position: relative;
+            z-index: 10;
+        }
+
+        & > span:nth-of-type(2) {
+            font-size: 12px;
+            margin: 0 3px 0 4px;
+            color: $gray;
+        }
+    
+    }
+}
+
+.noUnderline {
+    text-decoration: none;
+}
+
+.post__badge {
+    font-size: 14px !important;
+    color: rgb(83, 100, 113);
+
+    &.active {
+        color: $twitter-color;
+    }
+}
+
+.post__headerSpecial {
+    font-weight: 400;
+    font-size: 12px;
+    color: $gray;
+    position: relative;
+    z-index: 10;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.post__avatar {
+    margin-left: 20px;
+    margin-top: 10px;
+    z-index: 10;
+    border-radius: 50%;
+    cursor: pointer;
+
+    & .MuiAvatar-root {
+        width: 48px !important;
+        height: 48px !important;
+        border: 1px solid $twitter-background;
+    }
+
+    &.postComment .MuiAvatar-root {
+        width: 44px !important;
+        height: 44px !important;
+    }
+}
+
+.post__overlay {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+
+    position: absolute;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.post__moreBtn {
+    z-index: 10;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-right: 16px;
+    top: 4px;
+    right: 4px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &.chatMore {
+        top: 8px;
+        right: 4px;
+    }
+
+    & .MuiSvgIcon-root {
+        color: $light-gray !important;
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    &:hover {
+        background: #ebf1ff;
+    }
+}

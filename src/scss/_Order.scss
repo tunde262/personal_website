@@ -1,0 +1,50 @@
+.order {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $twitter-background;
+
+}
+
+.order__body {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    & > img {
+        border-radius: 20px;
+    }
+}
+
+.order__section {
+    flex: 0.6;
+    
+    &:last-of-type {
+        flex: 0.4;
+    }
+}
+
+.order__headerDescription {
+    font-weight: 400;
+    font-size: 13px;
+    color: $gray;
+    text-align: left;
+}
+
+.order__headerText {
+    text-align: left;
+
+    & > h3 {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+}
+
+.order__avatar {
+    padding: 15px 5px 15px 20px;
+
+    & .MuiAvatar-root {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}

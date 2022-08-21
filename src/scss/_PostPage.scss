@@ -1,0 +1,182 @@
+.postPage {
+    border-bottom: 1px solid $twitter-background;
+    position: relative;
+}
+
+.postPage__header {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.postPage__body {
+    flex: 1;
+    padding: 12px 15px 8px 15px;
+}
+
+.postPage__img {
+    margin-top: 1rem;
+    overflow: hidden;
+    background-color: yellow;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 16px;
+    width: 100%;
+    height: calc(calc(calc(calc(calc(100vw * 0.8) - 50px) * 0.6) * .53) - 45px);
+
+    & img {
+        width: 100%;
+        border-radius: 16px;
+    }
+}
+
+.postPage__timeStamp {
+    display: flex;
+    margin-top: 20px;
+    color: $gray;
+    font-size: 15px;
+    font-weight: 500;
+
+    & > p:not(:last-of-type)::after {
+        content: '\00B7';
+        margin: 0 5px;
+    }
+}
+
+.postPage__stats {
+    display: flex;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid $twitter-background;
+}
+
+.postPage__stat {
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: 500;
+
+    & > span:first-of-type {
+        font-size: 15px;
+        font-weight: 700;
+    }
+    
+    & > a {
+        color: $black;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        & > span:first-of-type {
+            font-size: 15px;
+            font-weight: 700;
+        }
+    }
+}
+
+.postPage__actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    padding-top: 5px;
+    border-top: 1px solid $twitter-background;
+}
+
+.postPage__headerDescription {
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: 500;
+
+    &.withImgs {
+        font-size: 23px;
+    }
+}
+
+.postPage__headerText {
+    padding-left: 5px;
+    cursor: pointer;
+
+    & > h3 {
+        font-size: 16px;
+        margin-bottom: 2px;
+
+        & a {
+            text-decoration: none;
+            color: #333;
+
+            &:hover span:first-of-type {
+                text-decoration: underline;
+            }
+
+            & > span:last-of-type {
+                font-weight: 500;
+                font-size: 13px;
+                color: $gray;
+                text-decoration: none;
+            }
+        }
+    
+        & span:first-of-type:hover {
+            text-decoration: underline;
+        }
+    }
+
+    & > p {
+        font-size: 15px;
+        font-weight: 500;
+        color: $gray;
+    }
+}
+
+.postPage__badge {
+    font-size: 14px !important;
+    color: rgb(83, 100, 113);
+
+    &.active {
+        color: $twitter-color;
+    }
+}
+
+.postPage__headerSpecial {
+    font-weight: 400;
+    font-size: 12px;
+    color: $gray;
+    text-decoration: none;
+}
+
+.postPage__avatar {
+    padding-right: 5px;
+    cursor: pointer;
+
+    & .MuiAvatar-root {
+        width: 55px !important;
+        height: 55px !important;
+        border: 1px solid $twitter-background;
+    }
+}
+
+.no-post {
+    width: 100%;
+    margin: 64px auto;
+    box-sizing: border-box;
+    padding: 0 32px;
+    text-align: center;
+
+    & h1 {
+        margin-bottom: 8px;
+        line-height: 36px;
+        font-size: 32px;
+        font-weight: 800;
+        overflow-wrap: break-word;
+    }
+
+    & p {
+        margin-bottom: 28px;
+        color: $gray;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        overflow-wrap: break-word;
+    }
+}

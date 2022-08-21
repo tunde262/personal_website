@@ -1,0 +1,239 @@
+// Layout Header
+
+.layout__profileHeader {
+    display: flex;
+    align-items: center;
+    padding: 0 0 10px 10px;
+} 
+
+.profile__btnContainer {
+    padding: 10px;
+    color: $twitter-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(29, 161, 242, 0.1);
+        border-radius: 50%;
+    }
+
+    & > .MuiSvgIcon-root {
+        width: 1em !important;
+        height: 1em !important;
+    }
+} 
+
+.profile__headerText {
+
+    & > h3 {
+        font-size: 20px;
+    }
+    
+    & > p {
+        font-size: 13px;
+        color: rgb(83, 100, 113);
+    
+    }
+
+    &.likePage {
+        padding-bottom: 15px;
+        padding-left: 20px;
+
+        & h3 {
+            font-weight: 800;
+        }
+    }
+}
+
+.profile__headerSpecial {
+    font-weight: 400;
+    font-size: 12px;
+    color: $gray;
+}
+
+.profile__badge {
+    font-size: 14px !important;
+    color: $twitter-color;
+}
+
+// Body Header
+
+.profile__header {
+    border-bottom: 1px solid $twitter-background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px 16px;
+    padding: 20px 20px 0;
+    position: relative;
+}
+
+.profile__moreBtn {
+    z-index: 10;
+    // height: 36px;
+    // width: 36px;
+    // border-radius: 50%;
+    margin-top: 5px;
+    margin-right: 8px;
+    margin-bottom: 12px;
+    top: 4px;
+    right: 4px;
+    position: absolute !important;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // border: 1px solid rgb(207, 217, 222);
+    // cursor: pointer;
+    // box-sizing: border-box;
+
+    & .MuiSvgIcon-root {
+        color: rgb(15, 20, 25) !important;
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    &:hover {
+        background: rgba(15, 20, 25, 0.1);
+    }
+}
+
+.profile__image {
+    height: 138px;
+    width: 138px;
+    border-radius: 50%;
+    border: 4px solid $twitter-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+
+    & .MuiAvatar-root {
+        width: 134px !important;
+        height: 134px !important;
+        border: 1px solid $twitter-background;
+    }
+}
+
+.profile__headerBody {
+    margin-bottom: 12px;
+
+    & > h3 {
+        font-weight: 700;
+        font-size: 15px;
+    }
+}
+
+.profile__headerSpecial {
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 4px;
+    color: $gray;
+}
+
+.profile__badge {
+    font-size: 14px !important;
+    color: rgb(83, 100, 113);
+
+    &.active {
+        color: $twitter-color;
+    }
+} 
+
+.profile__description {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.profile__stats { 
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    color: $gray;
+
+    & > p:not(:last-of-type) {
+        margin-right: 15px;
+    }
+}
+
+.profile__specialStat {
+    font-weight: 700;
+    color: #333;
+}
+
+.profile__membership {
+    display: flex;
+    color: $gray;
+    font-size: 15px;
+    margin-bottom: 12px;
+
+    & .MuiSvgIcon-root {
+        margin-right: 4px;
+        width: .7em !important;
+        height: .7em !important;
+    }
+}
+
+// Profile Tabs
+
+.profile__headerTabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    width: 100%;
+
+    & > div {
+        flex: 1;  
+        text-align: center;  
+        padding: 15px 16px 0;  
+
+        &.active {
+            & > h3 {
+                color: $twitter-color; 
+            }
+
+            & .block__underline {
+                display: block;
+            }
+        }
+
+        & > h3 {
+            font-weight: 700;
+            font-size: 15px;
+            color: rgb(83, 100, 113);
+        }
+    }
+
+    & > a {
+        flex: 1;  
+        text-align: center;  
+        padding: 15px 16px 0;  
+        text-decoration: none;
+
+        &:hover {
+            background-color: $twitter-opacity;
+            color: $twitter-color;
+            cursor: pointer;
+        }
+        
+        div {
+            &.active {
+                & > h3 {
+                    color: $twitter-color; 
+                }
+    
+                & .block__underline {
+                    display: block;
+                }
+            }
+    
+            & > h3 {
+                font-weight: 700;
+                font-size: 15px;
+                color: rgb(83, 100, 113);
+            }
+        }
+    }
+}

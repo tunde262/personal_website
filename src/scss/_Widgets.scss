@@ -1,0 +1,128 @@
+.widgets {
+    flex: 0.4;
+}
+
+.widgets__input {
+    display: flex;
+    align-items: center;
+    background-color: $twitter-background;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+
+    & > input {
+        border: none;
+        background-color: $twitter-background;
+    }
+
+    &.shop {
+        margin-top: 0;
+        width: 100%;
+        max-width: 700px;
+    }
+}
+
+.widgets__searchIcon {
+    color: gray;
+}
+
+.widgets__widgetContainer {
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #f5f8fa;
+    border-radius: 20px;
+
+    & > h2 {
+        font-size: 18px;
+        font-weight: 800;
+    }
+}
+
+.widgets__authContainer {
+    margin-top: 15px;
+    margin-bottom: 16px;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 16px;
+    border: 1px solid $twitter-background;
+
+    & > h2 {
+        font-size: 18px;
+        font-weight: 800;
+    }
+}
+
+.widgets__authStats {
+    padding-right: 12px; 
+    display: flex; 
+    align-items: center; 
+    line-height: 20px; 
+    font-size: 15px; 
+    padding-top:12px; 
+    color: $gray;
+
+    & .MuiSvgIcon-root {
+        color: $light-gray !important;
+        width: 17px !important;
+        height: 17px !important;
+        margin-right: 10px;
+    }
+
+    &.link {
+        font-size: 14px;
+        color: $twitter-color;
+
+        & .MuiSvgIcon-root {
+            color: $twitter-color !important;
+        }
+    }
+}
+
+.widgets__authDisclaimer {
+    padding-right: 12px; 
+    line-height: 16px; 
+    font-weight: 500; 
+    font-size: 13px; 
+    margin-bottom: 16px; 
+    padding-left: 12px; 
+    color: rgb(83, 100, 113); 
+
+    & > a {
+        color: $twitter-color;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.widgets__footer {
+    margin-bottom: 16px;  
+    margin-right: 12px;  
+    margin-left: 12px;  
+    display: flex;  
+    justify-content: center;
+
+    & > nav {
+        flex-wrap: wrap; 
+        padding-left: 16px; 
+        padding-right: 16px;
+
+        & > a, div {
+            padding-right: 12px; 
+            line-height: 21px; 
+            font-size: 12px; 
+            color: rgb(83, 100, 113); 
+            font-weight: 500; 
+            text-decoration: none;
+        }
+
+        & > a:hover {
+            text-decoration: underline;
+        }
+    }
+}

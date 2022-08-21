@@ -1,0 +1,109 @@
+.inbox__container {
+    flex: 0.8;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $twitter-background;
+
+    &.active {
+        border-right: 2px solid $twitter-color;
+    }
+
+    &:hover {
+        background-color: #f5f8fa;
+        cursor: pointer;
+
+        & .chat__moreBtn {
+            background-color: #f5f8fa;
+        }
+    }
+
+}
+
+.chat__moreBtn {
+    z-index: 10;
+    height: auto;
+    width: auto;
+    border-radius: 0;
+    margin-top: 5px;
+    margin-right: 0;
+    top: 4px;
+    right: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 5px;
+    color: $gray;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: #fff;
+
+    & .MuiSvgIcon-root {
+        color: $light-gray !important;
+        width: 22px !important;
+        height: 22px !important;
+    }
+}
+
+.message__body {
+    flex: 1;
+    padding: 10px;
+    position: relative;
+
+    & > img {
+        border-radius: 20px;
+    }
+}
+
+.message__headerDescription {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: $gray;
+    overflow: hidden;
+}
+
+.message__headerText > h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.message__badge {
+    font-size: 14px !important;
+    color: rgb(83, 100, 113);
+
+    &.active {
+        color: $twitter-color;
+    }
+}
+
+.message__headerSpecial {
+    font-weight: 400;
+    font-size: 12px;
+    color: $gray;
+}
+
+.message__avatar {
+    padding: 15px 5px 15px 20px;
+
+    & .MuiAvatar-root {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+.modal-table-list-container {
+    width: 100%; 
+    overflow: scroll;
+
+    &.modular {
+        max-height: 400px;
+    }
+}

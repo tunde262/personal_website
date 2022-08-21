@@ -1,0 +1,106 @@
+.shopFeed {
+    flex: 0.8;
+    border-right: 1px solid $twitter-background;
+    min-width: fit-content;
+    overflow-y: scroll;
+
+    /* Hide scrollbar from Chrome and Opera*/
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox*/
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.shopFeed__header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    border: 1px solid $twitter-background;
+    border-right: none;
+    padding-top: 15px;
+
+    & > h2 {
+        margin-left: 20px;
+        margin-bottom: 15px;
+        font-size: 20px;
+        font-weight: 800;                                                                                                                                                                                                                                                                                                                                                                 
+    }
+}
+
+.shopFeed__search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.shopFeed__cog {
+    display: flex;
+    
+    & > div{
+        padding-left: 20px;
+        padding-right: 20px;
+        color: $twitter-color;
+    }
+}
+
+.shopFeed__headerTabs {
+    display: flex;
+
+    & > a {
+        flex: 0.5;  
+        text-align: center;  
+        padding: 15px 16px 0;  
+        text-decoration: none;
+
+        &:hover {
+            background-color: $twitter-opacity;
+            color: $twitter-color;
+            cursor: pointer;
+        }
+
+        div {
+            &.active {
+                & > h3 {
+                    color: $twitter-color; 
+                }
+    
+                & .block__underline {
+                    display: block;
+                }
+            }
+    
+            & > h3 {
+                font-weight: 700;
+                font-size: 15px;
+                color: rgb(83, 100, 113);
+            }
+        }
+    }
+}
+
+.block__underline {
+    display: none;
+    background-color: $twitter-color;
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 12px;
+    margin-bottom: 1px;
+}
+
+.shopFeed__body {
+    width: calc(calc(100vw * 0.8) - 50px); 
+    max-width: 1040px; 
+    height: 50px;
+    padding: 15px 0;
+
+    & > h2 {
+        font-size: 1.25rem;
+        margin-left: calc(15px + 0.5rem); // ShopFeed__body top padding + NavItem margin top
+        margin-bottom: 5px;
+    }
+}

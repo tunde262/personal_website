@@ -1,0 +1,41 @@
+$twitter-color: rgb(27, 149, 224);
+$twitter-color: rgb(29, 155, 240);
+$twitter-opacity: #eef8fe;
+$twitter-background: #e6ecf0;
+$hover-background: rgb(247, 249, 249);
+$hover-blue: rgba(29, 161, 242, 0.1);
+$gray: rgb(83, 100, 113);
+$light-gray: rgb(108, 126, 138);
+$lighter-gray: #f5f8fa;
+$green: #4BB543;
+$black: rgb(15, 20, 25);
+$danger: #ff4b2b;
+$heart: rgb(249, 24, 128);
+$purple: rgb(121, 75, 196);
+
+$speed: 0.2s;
+
+
+// Media Query Mixins
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin mediaXl {
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+}

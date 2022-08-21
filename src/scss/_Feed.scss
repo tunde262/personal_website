@@ -1,0 +1,96 @@
+.feed__container {
+    flex: 0.8;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.feed {
+    border-right: 1px solid $twitter-background;
+    min-width: fit-content;
+    overflow-y: scroll;
+
+    /* Hide scrollbar from Chrome and Opera*/
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox*/
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.feed__header {
+    top: 0;
+    background-color: white;
+    z-index: 50;
+    border: 1px solid $twitter-background;
+    border-right: none;
+    padding-top: 15px;
+    cursor: pointer;
+    position: relative;
+
+    &.active {
+        position: -webkit-sticky;
+        position: -moz-sticky;
+        position: -ms-sticky;
+        position: -o-sticky;
+        position: sticky;
+    }
+
+    & > h2 {
+        margin-left: 20px;
+        margin-bottom: 15px;
+        font-size: 20px;
+        font-weight: 800;                                                                                                                                                                                                                                                                                                                                                                 
+    }
+}
+
+.feed_headerTabs {
+    display: flex;
+
+    & > a {
+        flex: 0.5;  
+        text-align: center;  
+        padding: 15px 16px 0;  
+        text-decoration: none;
+
+        &:hover {
+            background-color: $twitter-opacity;
+            color: $twitter-color;
+            cursor: pointer;
+        }
+
+        div {
+            &.active {
+                & > h3 {
+                    color: $twitter-color; 
+                }
+    
+                & .block__underline {
+                    display: block;
+                }
+            }
+    
+            & > h3 {
+                font-weight: 700;
+                font-size: 15px;
+                color: rgb(83, 100, 113);
+            }
+        }
+    }
+}
+
+.block__underline {
+    display: none;
+    background-color: $twitter-color;
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 12px;
+    margin-bottom: 1px;
+}
+
+.no-posts-container {
+    width: 100%;
+    margin: auto;
+    max-width: 400px;
+}

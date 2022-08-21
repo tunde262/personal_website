@@ -1,0 +1,366 @@
+// Header
+
+.chatBox {
+    border-right: 1px solid $twitter-background;
+}
+
+.chatBox__header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $twitter-background;
+    position: relative;
+}
+
+.chatBox__btnContainer {
+    padding: 10px;
+    margin-left: 10px;
+    color: $twitter-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(29, 161, 242, 0.1);
+        border-radius: 50%;
+    }
+
+    & > .MuiSvgIcon-root {
+        width: 1em !important;
+        height: 1em !important;
+    }
+} 
+
+.chatBox__headerText > h3 {
+    font-size: 20px;
+}
+
+.chatBox__headerText > p {
+    font-size: 13px;
+    color: rgb(83, 100, 113);
+
+}
+
+.chatBox__badge {
+    font-size: 14px !important;
+    color: rgb(83, 100, 113);
+
+    &.active {
+        color: $twitter-color;
+    }
+}
+
+.chatBox__headerSpecial {
+    font-weight: 400;
+    font-size: 12px;
+    color: $gray;
+}
+
+.chatBox__avatar {
+    padding: 10px 15px;
+    cursor: pointer;
+
+    & .MuiAvatar-root {
+        width: 35px !important;
+        height: 35px !important;
+    }
+}
+
+// ---- End ----- 
+
+.chatBox__body {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.chatBox__chat {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.chatBox__messages {
+    flex-grow: 1;
+}
+// Footer
+
+.chatBox__footer {
+    width: 100%;
+    height: 70px;
+}
+
+// Chatbox Profile
+.chatBox__profile {
+    border-bottom: 1px solid $twitter-background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+    padding: 40px 20px 20px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $hover-background;
+    }
+}
+
+.chatBox__profileHeader {
+    margin-bottom: 4px;
+
+    & > h3 {
+        font-weight: 700;
+        font-size: 15px;
+    }
+}
+
+.chatBox__profileSpecial {
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 4px;
+    color: $gray;
+}
+
+.chatBox__badge {
+    font-size: 14px !important;
+    color: rgb(83, 100, 113);
+
+    &.active {
+        color: $twitter-color;
+    }
+}
+
+.chatBox__profileDescription {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.chatBox__profileStats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: $gray;
+
+    & > p:first-child {
+        margin-right: 15px;
+
+    }
+
+    & > p:nth-child(2) {
+        margin-right: 15px;
+
+    }
+}
+
+.chatBox__profile__specialStat {
+    font-weight: 700;
+    color: #333;
+
+}
+
+.chatBox__membership {
+    display: flex;
+    color: $gray;
+    font-size: 15px;
+
+    & .MuiSvgIcon-root {
+        margin-right: 4px;
+        width: .8em !important;
+        height: .8em !important;
+    }
+}
+
+// Chat
+
+.chatBox__form {
+    display: flex;
+    border-top: 1px solid #D3D3D3;
+    border-bottom: 1px solid #D3D3D3;
+    margin: 0;
+    height: 100%;
+}
+  
+.chatBox__input {
+    border: none;
+    border-radius: 0;
+    width: 80%;
+    font-size: 1.2em;
+    padding-left: 10px;
+    margin: 0;
+    height: 100%;
+
+    &:focus {
+        outline: none;
+    }
+}
+  
+.sendButton {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #2979FF;
+    border: none;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border-radius: 0;
+    height: 100%;
+}
+
+  // Messages
+.messageContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5%;
+    margin-top: 3px;
+
+    &.currentUser {
+        justify-content: flex-end;
+
+        & .messageBox__container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin: 0 0;
+
+            & .messageBox{
+                background: $twitter-color;
+                border-bottom-left-radius: 16px;
+                border-bottom-right-radius: 0;
+                margin-right: 10px;
+        
+                & p {
+                    color: #fff;
+                }
+            }
+    
+            & .messageBox__specialText {
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+.messageBox__container {
+    margin: 0 10px;
+}
+
+.messages__header {
+    top: 0;
+    background-color: white;
+    z-index: 50;
+    border: 1px solid $twitter-background;
+    border-right: none;
+    padding-top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &.active {
+        position: sticky;
+    }
+
+    & > h2 {
+        font-size: 20px;
+        font-weight: 800;                                                                                                                                                                                                                                                                                                                                                                 
+    }
+}
+  
+.messages {
+    padding: 5% 0;
+    overflow: auto;
+    flex: auto;
+}
+
+.messageBox {
+    background: #F3F3F3;
+    border-radius: 16px;
+    padding: 12px 16px;
+    color: white;
+    display: inline-block;
+    max-width: 80%;
+    border-bottom-left-radius: 0;
+
+    &.currentUser {
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 0;
+    }
+
+    & p {
+        font-size: 14px;
+        color: #333;
+        word-wrap: break-word;
+        font-weight: 500;
+    }
+
+    & img {
+        vertical-align: middle;
+    }
+}
+
+.messageBox__specialText {
+    margin-top: 3px;
+    font-weight: 500;
+    font-size: 12px;
+    color: $gray;
+    display: flex;
+    padding: 0 10px
+}
+
+.no-chats-container {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+}
+
+.no-chats {
+    width: 100%;
+    margin: 32px auto;
+    box-sizing: border-box;
+    padding: 0 32px;
+
+    & h1 {
+        margin-bottom: 8px;
+        line-height: 36px;
+        font-size: 32px;
+        font-weight: 800;
+        text-align: left;
+        overflow-wrap: break-word;
+    }
+
+    & p {
+        margin-bottom: 28px;
+        text-align: left;
+        color: $gray;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        overflow-wrap: break-word;
+    }
+}
+
+.noChats__btn {
+    background-color: $twitter-color !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 900 !important;
+    font-size: 16px !important;
+    text-transform: inherit !important;
+    border-radius: 30px !important;
+    height: 52px !important;
+    width: fit-content !important;
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+}

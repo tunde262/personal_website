@@ -1,0 +1,24 @@
+.sidebarOption {
+    display: flex;
+    align-items: center;
+    color: #333;
+    width: fit-content;
+    font-family: 'Montserrat', sans-serif;
+    
+    & > h2 {
+        font-weight: 500;
+        font-size: 20px;
+        margin-right: 20px;
+    }
+}
+
+.sidebarOption--active > h2{
+    font-weight: 800;
+}
+
+.sidebarOption__icon {
+    position: relative;
+    & > .MuiSvgIcon-root {
+        padding: 20px;
+    }
+}
