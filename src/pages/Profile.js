@@ -60,16 +60,16 @@ const Profile = ({
             // }
             
         } else {
-            const q = query(postsCollectionRef, orderBy('createdAt', 'desc'), limit(3));
+            // const q = query(postsCollectionRef, orderBy('createdAt', 'desc'), limit(3));
 
-            onSnapshot(q, (snapshot) => {
-                console.log('UPDATING POSTS...');
-                setPosts(snapshot.docs.map((doc) => ({...doc.data(), _id: doc.id})));
-                setGotPosts(true);
+            // onSnapshot(q, (snapshot) => {
+            //     console.log('UPDATING POSTS...');
+            //     setPosts(snapshot.docs.map((doc) => ({...doc.data(), _id: doc.id})));
+            //     setGotPosts(true);
 
-                // Get the last visible document
-                setLastPageDoc(snapshot.docs[snapshot.docs.length - 1]);
-            })
+            //     // Get the last visible document
+            //     setLastPageDoc(snapshot.docs[snapshot.docs.length - 1]);
+            // })
         } 
         
 
@@ -86,12 +86,12 @@ const Profile = ({
     };
 
     const handleScroll = (e) => {
-        const { offsetHeight, scrollTop, scrollHeight} = e.target
+        // const { offsetHeight, scrollTop, scrollHeight} = e.target
 
-        if (offsetHeight + scrollTop >= scrollHeight - 1 && !showBottomSpinner && !noMorePosts && !filter) {
-            console.log('scrolling');
-            loadMore();
-        }
+        // if (offsetHeight + scrollTop >= scrollHeight - 1 && !showBottomSpinner && !noMorePosts && !filter) {
+        //     console.log('scrolling');
+        //     loadMore();
+        // }
     }
 
     const loadMore = () => {
@@ -180,7 +180,7 @@ const Profile = ({
 
                 {showBottomSpinner && !noMorePosts && <Spinner />}
                 
-                <div className="no-rides">{filter === 'about' && 'Wow! You made it this far 😊'}</div>
+                <div className="no-rides"></div>
                 
                 {isTablet && (
                     <Link to='https://www.twitter.com' id="fixed-button" className="show"><PostAddIcon /></Link>
