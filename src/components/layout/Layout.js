@@ -6,11 +6,13 @@ import { useHistory } from 'react-router-dom';
 // Icons - material UI
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
+import MenuIcon from '@material-ui/icons/Menu';
 
 const Layout = ({ 
     children, 
     page, 
     sideNav, 
+    handleSlideMenu,
     handleScroll 
 }) => {
     // Screen Width
@@ -80,6 +82,14 @@ const Layout = ({
 
                     {page === 'profile' && (
                         <div className="layout__profileHeader">
+                            <div onClick={isTablet ? handleSlideMenu : undefined} className="profile__btnContainer">
+
+                                {isMobile && (
+                                    <div>
+                                        <MenuIcon />
+                                    </div>
+                                )}
+                            </div>
                             <div className="profile__headerText">
                                 <h3>
                                     Tunde Adepitan{' '}

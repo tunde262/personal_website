@@ -10,7 +10,7 @@ import { collection, query, onSnapshot, orderBy, startAfter, limit } from 'fireb
 import { connect } from 'react-redux';
 
 //  Actions - imported
-import { setPage } from '../actions/navActions';
+import { setPage, toggleSideNav } from '../actions/navActions';
 
 // wrapper layout
 import Layout from '../components/layout/Layout';
@@ -27,6 +27,7 @@ import PostAddIcon from '@material-ui/icons/PostAdd';
 
 const Profile = ({ 
     setPage,
+    toggleSideNav,
     post
 }) => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -173,7 +174,7 @@ const Profile = ({
 
     return (
         <Fragment>
-            <Layout handleScroll={handleScroll} page="profile">
+            <Layout handleScroll={handleScroll} handleSlideMenu={toggleSideNav} page="profile">
                 <ProfileHeader />
                 {postList}
 
@@ -192,6 +193,7 @@ const Profile = ({
 
 Profile.propTypes = {
     setPage: PropTypes.func.isRequired,
+    toggleSideNav: PropTypes.func.isRequired,
     post: PropTypes.object.isRequired,
 }
 
@@ -200,5 +202,6 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, { 
-    setPage
+    setPage,
+    toggleSideNav
 })(Profile);
