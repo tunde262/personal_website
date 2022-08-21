@@ -145,27 +145,30 @@ const Profile = ({
             )
         }
     } else {
-        if(postListRef === null || !gotPosts) {
-            postList = <Spinner />;
-        }
-        else {
-            if(postListRef.length > 0) {
-                postList = postListRef.map(post => {
-                    if(post) {
-                        return (
-                            <Post key={post._id} post={post} />
-                        )
-                    }
-                })
-            }
-            else {
-                postList = (
-                    <div className="no-rides">
-                        <h1>No Posts</h1>
-                    </div>
-                );
-            }
-        }
+        postList = (
+            <About />
+        )
+        // if(postListRef === null || !gotPosts) {
+        //     postList = <Spinner />;
+        // }
+        // else {
+        //     if(postListRef.length > 0) {
+        //         postList = postListRef.map(post => {
+        //             if(post) {
+        //                 return (
+        //                     <Post key={post._id} post={post} />
+        //                 )
+        //             }
+        //         })
+        //     }
+        //     else {
+        //         postList = (
+        //             <div className="no-rides">
+        //                 <h1>No Posts</h1>
+        //             </div>
+        //         );
+        //     }
+        // }
     }
 
     return (

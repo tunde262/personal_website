@@ -124,7 +124,7 @@ const ProfileHeader = ({
                 </div>
 
                 <div className="profile__stats">
-                    <p><span className="profile__specialStat">12.1K</span> Tweets</p>
+                    {/* <p><span className="profile__specialStat">12.1K</span> Tweets</p> */}
                     <p><span className="profile__specialStat">9</span> Projects</p>
                     <p><span className="profile__specialStat">115K</span> MAU</p>
                     <p><span className="profile__specialStat">$1,015</span> /yr {/*(+68%/y)*/}</p>
@@ -140,14 +140,14 @@ const ProfileHeader = ({
                 </Button> */}
 
                 <div className="profile__headerTabs">
-                    <a href="/">
+                    {/* <a href="/">
                         <div className={`${(filter === null || filter === undefined || filter === 'home') && 'active'}`}>
                             <h3>Tweets</h3>
                             <div className="block__underline"></div>
                         </div>
-                    </a>
-                    <a href={`/?show=about`}>
-                        <div className={`${(filter && filter === 'about') && 'active'}`}>
+                    </a> */}
+                    <a href={`/`}>
+                        <div className={`${(filter === null || filter === undefined || filter === 'about') && 'active'}`}>
                             <h3>About</h3>
                             <div className="block__underline"></div>
                         </div>
